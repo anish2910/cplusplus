@@ -3,31 +3,21 @@
 using namespace std;
  
 class Abstract {
-    private:
-        string info;
-    public:
+    public: //pure virtual function
         virtual void printContent() = 0; 
 };
  
-class Concrete {
-    private:
-        string info;
+class Concrete:public Abstract {//inherited publicly
     public:
-        Concrete(string s) : info(s) { }
-        void printContent() {
-            cout << "Concrete Object Information\n" << info << endl;
+        void printContent() 
+		{
+            cout << "ID IS 10341" << endl;
         }
 };
  
 int main()
 {
-    /*
-     * Abstract a;
-     * Error : Abstract Instance Creation Failed
-     */
-    string s;
- 
-    s = "Object Creation Date : 23:26 PM 15 Dec 2013";
-    Concrete c(s);
+         
+    Concrete c;
     c. printContent();
 }
