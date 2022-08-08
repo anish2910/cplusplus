@@ -23,4 +23,5 @@ int main()
         cout << error << endl;
     }
 
-    retu
+    return 0;
+}
